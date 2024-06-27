@@ -5,6 +5,12 @@
 module "demo" {
   source = "moldangrus/namespace3/kubernetes"
   name = "this-ns-demo"
+    labels = {
+    "env" = "demo"
+  }
+  annotations = {
+    "created-by" = "terraform"
+  }
 }
 
 ```
